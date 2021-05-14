@@ -24,10 +24,17 @@ while True:
     plt.scatter(0,0,c='green',edgecolors='none',s=100)
     plt.scatter(rw.x_values[-1],rw.y_values[-1],c='red',edgecolors='none',s=100)
 
-    #隐藏坐标轴
+    #隐藏坐标轴这种方法不可用，不生效
     #current_axes = plt.axes()
     #current_axes.get_xaxis().set_visible(False)
     #current_axes.get_yaxis().set_visible(False)
+    #隐藏坐标轴这种方法可用，生效
+    plt.axis('off')
+    # 隐藏坐标轴这种方法可用，生效，与off有些许区别
+    #current_axes = plt.gca()
+    #current_axes.axes.get_yaxis().set_visible(False)
+    #current_axes.axes.get_xaxis().set_visible(False)
+
 
     plt.show()
 
